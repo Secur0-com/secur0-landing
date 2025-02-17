@@ -3,6 +3,8 @@ import Companies from "../components/Companies.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Title from "../components/Title.astro";
+import ArrowRight from "../components/icons/ArrowRight.jsx";
+import ArrowDown from "../components/icons/ArrowDown.jsx";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
@@ -11,17 +13,29 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<div class="flex flex-col gap-20 max-w-[1280px] mx-auto">
+	<div class="flex flex-col gap-20 max-w-[1280px] mx-auto bg-gray-900">
 		<section
 			class="h-[calc(100vh-5rem)] flex flex-col items-center justify-between"
 		>
 			<Header />
-			<div>
-				<button type="button">Contact us</button>
+			<div class="flex flex-row items-center gap-6">
+				<a
+					href="mailto:javier@secur0.com"
+					class="flex items-center gap-2 px-4 py-2 rounded-full bg-white cursor-pointer"
+				>
+					Contact us <ArrowRight />
+				</a>
+				<a
+					href="#what-is-secur0"
+					class="flex items-center gap-2 px-4 py-2 rounded-full text-white cursor-pointer"
+				>
+					Learn more <ArrowDown />
+				</a>
 			</div>
 			<Companies />
 		</section>
 		<Title
+			id="what-is-secur0"
 			tag="what is secur0"
 			title="The things that make us unique"
 			description="The best values out there, all combined into one service."
@@ -29,6 +43,7 @@ import "../styles/global.css";
 			content 1
 		</Title>
 		<Title
+			id="our-services"
 			tag="our services"
 			title="Recommended steps"
 			description="These are the recommended steps for new companies on bug bounty."
@@ -36,6 +51,7 @@ import "../styles/global.css";
 			content 2
 		</Title>
 		<Title
+			id="faq"
 			tag="faq"
 			title="Frequently asked questions"
 			description="If you have any questions, please <a class='text-blue-500 underline' href='mailto:javier@secur0.com'>contact us</a>."

@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Companies from "../components/Companies.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<div class="flex flex-col gap-20 max-w-[1280px] mx-auto">
+		<section
+			class="h-[calc(100vh-5rem)] flex flex-col items-center justify-between"
+		>
+			<Header />
+			<div>
+				<button type="button">Contact us</button>
+			</div>
+			<Companies />
+		</section>
+		<Title
+			tag="what is secur0"
+			title="The things that make us unique"
+			description="The best values out there, all combined into one service."
+		>
+			content 1
+		</Title>
+		<Title
+			tag="our services"
+			title="Recommended steps"
+			description="These are the recommended steps for new companies on bug bounty."
+		>
+			content 2
+		</Title>
+		<Title
+			tag="faq"
+			title="Frequently asked questions"
+			description="If you have any questions, please <a class='text-blue-500 underline' href='mailto:javier@secur0.com'>contact us</a>."
+		>
+			content 3
+		</Title>
+		<Footer />
+	</div>
 </Layout>

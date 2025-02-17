@@ -1,0 +1,13 @@
+---
+// Destructure title, tag, and description from Astro.props
+const { title, tag, description } = Astro.props;
+---
+
+<section class="flex flex-col items-center gap-4 px-2.5 w-full mx-auto text-center bg-amber-100">
+    <h2 class="max-w-[400px] uppercase font-mono">{tag}</h2>
+    <h1 class="max-w-[400px] text-4xl font-medium">{title}</h1>
+    <p class="max-w-[400px]" set:html={description}></p>
+    <div class="mt-10 w-full bg-amber-200">
+        <slot/>
+    </div>
+</section>

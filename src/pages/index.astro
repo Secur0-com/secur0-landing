@@ -5,6 +5,8 @@ import Header from "../components/Header.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 import RotatingText from "../components/react/RotatingText.jsx";
+import arrowImage from "../assets/arrow.svg";
+import { Image } from "astro:assets";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -38,13 +40,13 @@ import "../styles/global.css";
 					href="mailto:javier@secur0.com"
 					class="flex items-center gap-2 px-4 py-2 rounded-full bg-white cursor-pointer"
 				>
-					Contact us <img src="/src/assets/arrow-right.svg" alt="Arrow right">
+					Contact us <Image src={arrowImage} alt="Arrow right" />
 				</a>
 				<a
 					href="#what-is-secur0"
 					class="flex items-center gap-2 px-4 py-2 rounded-full text-white cursor-pointer"
 				>
-					Learn more <img src="/src/assets/arrow-right.svg" alt="Arrow right" class="rotate-90 invert">
+					Learn more <Image src={arrowImage} alt="Arrow right" class="rotate-90 invert" />
 				</a>
 			</div>
 			<Companies />

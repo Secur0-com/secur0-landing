@@ -197,7 +197,7 @@ const RotatingText = forwardRef((props, ref) => {
                                                 array.reduce((sum, word) => sum + word.characters.length, 0)
                                             ),
                                         }}
-                                        className={cn("inline-block", elementLevelClassName)}
+                                        className={cn("inline-block select-none", elementLevelClassName)}
                                     >
                                         {char}
                                     </motion.span>

@@ -16,10 +16,10 @@ import "../styles/global.css";
 <Layout>
 	<div class="flex flex-col gap-20 max-w-[1280px] mx-auto">
 		<section
-			class="h-[calc(100lvh-5rem)] min-h-[848px] flex flex-col items-center gap-30"
+			class="h-[calc(100lvh-5rem)] min-h-[690px] sm:min-h-[1060px] flex flex-col items-center gap-15 sm:gap-30"
 		>
 			<Header />
-			<h1 class="flex max-[950px]:flex-col flex-row gap-2 sm:gap-5 items-center text-5xl sm:text-7xl text-white font-light">
+			<h1 class="flex max-[950px]:flex-col flex-row gap-2 sm:gap-5 items-center text-5xl sm:text-7xl text-white font-light sm:mt-10">
 				Hackea con <RotatingText
 					client:load
 					texts={['responsabilidad', 'impacto', 'recompensas', 'reconocimiento', 'Secur0']}
@@ -34,7 +34,9 @@ import "../styles/global.css";
 					rotationInterval={2000}
 				/>
 			</h1>
-			<p class="text-gray-300 max-w-[500px] text-center text-2xl font-normal">Accede a una red de hackers éticos y paga solo por vulnerabilidad encontrada.</p>
+			<p class="text-gray-300 max-w-[350px] sm:max-w-[500px] text-center text-base sm:text-2xl font-normal">
+				Accede a una red de hackers éticos y paga solo por vulnerabilidad encontrada.
+			</p>
 			<div class="flex flex-row items-center gap-6">
 				<a
 					href="mailto:javier@secur0.com"

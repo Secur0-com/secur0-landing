@@ -1,3 +1,46 @@
-<div class="w-full bg-blue-200 h-[300px]">
-    
-</div>
+---
+import { Image } from "astro:assets";
+import Linkedin from "../assets/linkedin.svg";
+import Github from "../assets/github.svg";
+import Twitter from "../assets/twitter-x.svg";
+import Youtube from "../assets/youtube.svg";
+import Discord from "../assets/discord.svg";
+---
+
+<footer class="w-full flex flex-col justify-between py-10 px-10">
+    <!-- <div class="w-full h-full flex flex-row justify-center items-center text-white">
+        <div>
+            <h3 class="uppercase tracking-[1.4px]">Useful links</h3>
+            <ul class="mt-4">
+                <li class="flex flex-col gap-2">
+                    <a href="https://discord.gg/s46BRr2Drc" target="_blank">Discord</a>
+                    <a href="https://imnotahacker.com" target="_blank">I'm not a hacker</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="w-full flex justify-between items-center">
+        <span class="flex flex-row gap-4">
+            <a href="https://www.linkedin.com/company/secur0" target="_blank">
+                <Image src={Linkedin} alt="Linkedin" width={30} height={30} class="invert opacity-80" />
+            </a>
+            <a href="https://github.com/Secur0-com" target="_blank">
+                <Image src={Github} alt="Github" width={30} height={30} class="invert opacity-80" />
+            </a>
+            <a href="https://x.com/Secur00" target="_blank">
+                <Image src={Twitter} alt="Twitter" width={30} height={30} class="invert opacity-80" />
+            </a>
+            <a href="https://www.youtube.com/@secur0-com" target="_blank">
+                <Image src={Youtube} alt="Youtube" width={30} height={30} class="invert opacity-80" />
+            </a>
+            </a>
+            <a href="https://discord.gg/s46BRr2Drc" target="_blank">
+                <Image src={Discord} alt="Discord" width={30} height={30} class="invert opacity-80" />
+            </a>
+        </span>
+
+        <span class="text-white">
+            Copyright © 2025 Secur0. All rights reserved.
+        </span>
+    </div>
+</footer>

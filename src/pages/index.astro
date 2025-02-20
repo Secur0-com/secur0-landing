@@ -3,6 +3,7 @@ import Companies from "../components/Companies.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Title from "../components/Title.astro";
+import Faq from "../components/Faq.astro";
 import Layout from "../layouts/Layout.astro";
 import RotatingText from "../components/react/RotatingText.jsx";
 import arrowImage from "../assets/arrow.svg";
@@ -23,7 +24,7 @@ import "../styles/global.css";
 				Hackea con <RotatingText
 					client:load
 					texts={['responsabilidad', 'impacto', 'recompensas', 'reconocimiento', 'Secur0']}
-					mainClassName="backdrop-blur-2xl bg-slate-700 bg-(--rotatingtext-bg) border-1 border-blue-300 border-(--rotatingtext-border) text-white font-semibold overflow-hidden py-1 sm:py-2.5 px-2 sm:px-4 justify-center rounded-lg"
+					mainClassName="backdrop-blur-2xl bg-(--card-bg-dark) border-1 border-(--card-border) -border-blue-300 text-white font-semibold overflow-hidden py-1 sm:py-2.5 px-2 sm:px-4 justify-center rounded-xl"
 					staggerFrom={"last"}
 					initial={{ y: "100%" }}
 					animate={{ y: 0 }}
@@ -75,7 +76,7 @@ import "../styles/global.css";
 			title="Frequently asked questions"
 			description="If you have any questions, please <a class='text-sky-400 underline' href='mailto:javier@secur0.com'>contact us</a>."
 		>
-			content 3
+			<Faq />
 		</Title>
 		<Footer />
 	</div>

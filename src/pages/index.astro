@@ -9,21 +9,31 @@ import RotatingText from "../components/react/RotatingText.jsx";
 import arrowImage from "../assets/arrow.svg";
 import { Image } from "astro:assets";
 import "../styles/global.css";
+import Steps from "../components/Steps.astro";
+import Card from "../components/Card.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<div class="flex flex-col gap-20 max-w-[1280px] mx-auto">
+	<div class="flex flex-col gap-24 max-w-[1280px] mx-auto">
 		<section
-			class="h-[calc(100lvh-5rem)] min-h-[690px] sm:min-h-[1060px] flex flex-col items-center gap-15 sm:gap-30"
+			class="h-[calc(100lvh-5rem)] min-h-[690px] flex flex-col items-center gap-15 sm:gap-30"
 		>
 			<Header />
-			<h1 class="flex max-[950px]:flex-col flex-row gap-2 sm:gap-5 items-center text-5xl sm:text-7xl text-white font-light sm:mt-10">
+			<h1
+				class="flex max-[950px]:flex-col flex-row gap-2 sm:gap-5 items-center text-5xl sm:text-7xl text-white font-light sm:mt-10"
+			>
 				Hackea con <RotatingText
 					client:load
-					texts={['responsabilidad', 'impacto', 'recompensas', 'reconocimiento', 'Secur0']}
+					texts={[
+						"responsabilidad",
+						"impacto",
+						"recompensas",
+						"reconocimiento",
+						"Secur0",
+					]}
 					mainClassName="backdrop-blur-2xl bg-(--card-bg-dark) border-1 border-(--card-border) -border-blue-300 text-white font-semibold overflow-hidden py-1 sm:py-2.5 px-2 sm:px-4 justify-center rounded-xl"
 					staggerFrom={"last"}
 					initial={{ y: "100%" }}
@@ -35,8 +45,11 @@ import "../styles/global.css";
 					rotationInterval={2000}
 				/>
 			</h1>
-			<p class="text-gray-300 max-w-[350px] sm:max-w-[500px] text-center text-base sm:text-2xl font-normal">
-				Accede a una red de hackers éticos y paga solo por vulnerabilidad encontrada.
+			<p
+				class="text-gray-300 max-w-[350px] sm:max-w-[500px] text-center text-base sm:text-2xl font-normal"
+			>
+				Accede a una red de hackers éticos y paga solo por
+				vulnerabilidad encontrada.
 			</p>
 			<div class="flex flex-row items-center gap-6">
 				<a
@@ -49,7 +62,11 @@ import "../styles/global.css";
 					href="#what-is-secur0"
 					class="flex items-center gap-2 px-4 py-2 rounded-full text-white cursor-pointer"
 				>
-					Learn more <Image src={arrowImage} alt="Arrow right" class="rotate-90 invert opacity-80" />
+					Learn more <Image
+						src={arrowImage}
+						alt="Arrow right"
+						class="rotate-90 invert opacity-80"
+					/>
 				</a>
 			</div>
 			<Companies />
@@ -60,7 +77,14 @@ import "../styles/global.css";
 			title="The things that make us unique"
 			description="The best values out there, all combined into one service."
 		>
-			content 1
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]">
+				<Card title="Identify <strong>real vulnerabilities</strong>" />
+				<Card title="<strong>Expert</strong> hacking community" />
+				<Card title="<strong>Continuous</strong> testing" />
+				<Card title="<strong>Quick</strong> launch" />
+				<Card title="Pay only for <strong>valid vulnerabilities</strong>" />
+				<Card title="<strong>Flexible</strong> pricing" />
+			</div>
 		</Title>
 		<Title
 			id="our-services"
@@ -68,7 +92,12 @@ import "../styles/global.css";
 			title="Recommended steps"
 			description="These are the recommended steps for new companies on bug bounty."
 		>
-			content 2
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full text-white max-w-[450px] lg:max-w-[900px]">
+				<Steps title="Crowdsourced pentesting" step="Step 1" description="Evaluate the security of your environment with the help of our community." />
+				<Steps title="Private programs" step="Step 2" description="Pin down the best of the best to test the security of your environment." />
+				<Steps title="Public Programs" step="Step 3" description="Make your scopes public to all the community to test." />
+				<Steps title="Live hacking events" step="Step 4" description="Organize your own live hacking events and get the best hackers in the world." />
+			</div>
 		</Title>
 		<Title
 			id="faq"
@@ -76,7 +105,16 @@ import "../styles/global.css";
 			title="Frequently asked questions"
 			description="If you have any questions, please <a class='text-sky-400 underline' href='mailto:javier@secur0.com'>contact us</a>."
 		>
-			<Faq />
+			<div class="flex flex-col items-center mx-auto gap-3 w-[420px] sm:w-[500px] md:w-[700px] lg:w-[900px]">
+				<Faq
+					title="Why choose Secur0 for your cybersecurity needs?"
+					description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, nisl nec ultricies lacinia, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl."
+				/>
+				<Faq
+					title="Why choose Secur0?"
+					description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec ultricies lacinia, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, nisl nec ultricies lacinia, nunc nisl aliquet nunc, vitae aliquam nisl nunc vitae nisl."
+				/>
+			</div>
 		</Title>
 		<Footer />
 	</div>

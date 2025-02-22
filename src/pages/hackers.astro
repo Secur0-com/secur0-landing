@@ -1,14 +1,55 @@
 ---
+import { Image } from 'astro:assets';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import RotatingText from '../components/react/RotatingText';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import Companies from '../components/Companies.astro';
+import arrowImage from "../assets/arrow.svg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Header />
+	<section
+		class="h-[calc(100lvh-5rem)] min-h-[690px] sm:min-h-[1060px] flex flex-col items-center gap-15 sm:gap-30"
+	>
+		<Header />
+		<h1 class="flex max-[950px]:flex-col flex-row gap-2 sm:gap-5 items-center text-5xl sm:text-7xl text-white font-light sm:mt-10">
+			Hackea con <RotatingText
+				client:load
+				texts={['responsabilidad', 'impacto', 'recompensas', 'reconocimiento', 'Secur0']}
+				mainClassName="backdrop-blur-2xl bg-(--card-bg-dark) border-1 border-(--card-border) -border-blue-300 text-white font-semibold overflow-hidden py-1 sm:py-2.5 px-2 sm:px-4 justify-center rounded-xl"
+				staggerFrom={"last"}
+				initial={{ y: "100%" }}
+				animate={{ y: 0 }}
+				exit={{ y: "-120%" }}
+				staggerDuration={0.025}
+				splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+				transition={{ type: "spring", damping: 30, stiffness: 400 }}
+				rotationInterval={2000}
+			/>
+		</h1>
+		<p class="text-gray-300 max-w-[350px] sm:max-w-[500px] text-center text-base sm:text-2xl font-normal">
+			Accede a una red de hackers éticos y paga solo por vulnerabilidad encontrada.
+		</p>
+		<div class="flex flex-row items-center gap-6">
+			<a
+				href="mailto:javier@secur0.com"
+				class="flex items-center gap-2 px-4 py-2 rounded-full bg-white cursor-pointer"
+			>
+				Contact us <Image src={arrowImage} alt="Arrow right" />
+			</a>
+			<a
+				href="#what-is-secur0"
+				class="flex items-center gap-2 px-4 py-2 rounded-full text-white cursor-pointer"
+			>
+				Learn more <Image src={arrowImage} alt="Arrow right" class="rotate-90 invert opacity-80" />
+			</a>
+		</div>
+		<Companies />
+	</section>
 	<Footer />
 </Layout>

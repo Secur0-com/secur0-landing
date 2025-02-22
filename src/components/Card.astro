@@ -1,0 +1,8 @@
+---
+// Destructure title, tag, and description from Astro.props
+const { extras, title } = Astro.props;
+---
+
+<div class={extras + " " + "w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl flex flex-col items-start gap-4"}>
+    <h3 class="text-3xl font-normal text-left" set:html={title}>{title}</h3>
+</div>

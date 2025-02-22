@@ -10,8 +10,8 @@
     --color-white: #ffffffca;
     --color-gray-300: #ccccccca;
 
-    --card-bg: rgba(255,255,255,0.04);
-    --card-bg-dark: rgba(60, 73, 91, 0.15);
+    --card-bg: rgba(178, 178, 178, 0.1);
+    --card-bg-dark: rgba(122, 135, 152, 0.209);
     --card-border: rgba(255,255,255,0.15);
 }
 

@@ -1,23 +1,18 @@
 ---
 import { Image } from 'astro:assets'
 import chevron from '../assets/chevron-up.svg'
+
+const { title, description } = Astro.props;
 ---
 
-<div class="flex flex-col items-center mx-auto gap-3 w-[800px] px-2.5">
-    <div class="w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-1 sm:py-2.5 px-2 sm:px-4 rounded-xl">
-        <span
-            onclick="document.querySelectorAll('.faq-content').forEach(el => { if(el !== this.nextElementSibling) { el.classList.add('hidden'); el.previousElementSibling.querySelector('img').classList.remove('rotate-180'); }}); this.nextElementSibling.classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')"
-            class="w-full flex flex-row justify-between items-center cursor-pointer"
-        >
-            <h2 class="text-3xl font-bold text-white max-w-[90%] text-left">
-                Why choose Secur0 for your cybersecurity needs?
-            </h2>
-            <Image src={chevron} alt="Arrow up" class="w-8 h-8 invert opacity-80 transition-transform duration-300" />
-        </span>
-        <p class="faq-content text-white text-base font-normal text-left mt-2 hidden transition-all duration-300">
-            At Pangea, we redefine how businesses connect with top-tier marketing and design talent. Our platform bridges the gap between organizations looking for world-class expertise and professionals who are ready to deliver exceptional results. Whether you're a startup, a growing company, or an established enterprise, Pangea provides access to a curated network of fractional talent, enabling you to scale your projects efficiently and cost-effectively.
-            
-            We understand that finding the right talent can be a challenge. That's why we leverage cuttingedge AI matching technology to ensure that every hire perfectly aligns with your project goals, company culture, and budget. Our platform is designed to take the guesswork out of hiring by connecting you with experts who specialize in everything from content marketing and graphic design to user experience (UX) design and social media strategy. This means you get more than just a freelancer—you gain a trusted partner invested in your success.
-        </p>
-    </div>
+
+<div class="w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl">
+    <span
+        onclick="document.querySelectorAll('.faq-content').forEach(el => { if(el !== this.nextElementSibling) { el.classList.add('hidden'); el.previousElementSibling.querySelector('img').classList.remove('rotate-180'); }}); this.nextElementSibling.classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')"
+        class="w-full flex flex-row justify-between items-center cursor-pointer"
+    >
+        <h3 class="text-base sm:text-2xl font-bold text-white max-w-[95%] sm:max-w-[90%] text-left select-none">{title}</h3>
+        <Image src={chevron} alt="Arrow up" class="w-8 h-8 invert opacity-80 transition-transform duration-300" />
+    </span>
+    <p class="faq-content text-white text-base font-normal text-left mt-2 hidden transition-all duration-300">{description}</p>
 </div>

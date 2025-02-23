@@ -3,7 +3,7 @@
 const { title, step, description } = Astro.props;
 ---
 
-<div class="sm:w-[calc(50%-0.5rem)] max-w-[600px] min-w-[calc(450px-0.5rem)] backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl flex flex-col items-start gap-4">
+<div class="w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl flex flex-col items-start gap-4">
     <div class="w-full flex flex-row items-center justify-between gap-2">
         <h3 class="text-2xl font-bold text-left">{title}</h3>
         <p class="font-bold">{step}</p>

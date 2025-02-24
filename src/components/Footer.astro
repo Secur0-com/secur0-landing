@@ -7,19 +7,25 @@ import Youtube from "../assets/youtube.svg";
 import Discord from "../assets/discord.svg";
 ---
 
-<footer class="w-full flex flex-col justify-between py-5 sm:py-10 px-2.5 sm:px-10 gap-2">
-    <!-- <div class="w-full h-full flex flex-row justify-center items-center text-white">
+<footer class="w-full flex flex-col justify-between py-5 sm:py-10 px-2.5 sm:px-10 gap-4">
+    <!-- <div class="w-full h-full flex justify-between flex-row items-center text-white">
         <div>
-            <h3 class="uppercase tracking-[1.4px]">Useful links</h3>
+            <h3 class="uppercase tracking-[1.4px]">Legal</h3>
             <ul class="mt-4">
                 <li class="flex flex-col gap-2">
-                    <a href="https://discord.gg/BgxwD23KRS" target="_blank">Discord</a>
-                    <a href="https://imnotahacker.com" target="_blank">I'm not a hacker</a>
+                    <a href="/terms-and-conditions">Terms and conditions</a>
+                    <a href="/privacy-policy">Privacy policy</a>
                 </li>
             </ul>
         </div>
     </div> -->
-    <div class="w-full flex flex-col gap-4 sm:gap-0  sm:flex-row justify-between items-center">
+    <div class="w-full flex flex-col gap-4 md:gap-0  md:flex-row justify-end items-center">
+        <span class="flex flex-row gap-4 text-white text-center sm:text-left">
+            <a href="/legal/terms-and-conditions">Terms and conditions</a>
+            <a href="/legal/privacy-policy">Privacy policy</a>
+        </span>
+    </div>
+    <div class="w-full flex flex-col gap-4 md:gap-0  md:flex-row justify-between items-center">
         <span class="flex flex-row gap-4">
             <a href="https://www.linkedin.com/company/secur0" target="_blank">
                 <Image src={Linkedin} alt="Linkedin" width={30} height={30} class="invert opacity-80" />

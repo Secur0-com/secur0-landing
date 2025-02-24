@@ -1,0 +1,21 @@
+---
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+import TermsContent from '../../content/terms-and-conditions.md';
+import "../../styles/global.css";
+import "../../styles/markdown.css";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<div class="flex flex-col max-w-[1280px] mx-auto">
+		<Header />
+		<article class="text-white max-w-[900px] mx-auto px-4 sm:px-24">
+			<TermsContent />
+		</article>
+		<Footer />
+	</div>
+</Layout>

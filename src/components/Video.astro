@@ -1,0 +1,20 @@
+---
+// Destructure title, tag, and description from Astro.props
+const { title, description, videoId, videoPoster, authorLink, author } = Astro.props;
+import { YouTube } from 'astro-embed';
+---
+
+<div class="backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl flex flex-col items-start justify-between gap-2">
+    <div class="max-w-[651px]">
+        <h3 class="text-xl font-semibold text-left" set:html={title}>{title}</h3>
+        <p class="text-xs sm:text-sm text-gray-300 font-normal text-left">{description}</p>
+    </div>
+    <YouTube
+        id={videoId}
+        poster={videoPoster ? videoPoster : "https://i3.ytimg.com/vi/" + videoId + "/maxresdefault.jpg"}
+        class="w-full aspect-video rounded-md"
+    />
+    <p class="w-full flex items-center gap-2 text-gray-300">
+        By: {authorLink ? <a href={authorLink} target="_blank" class="external-link hover:underline">{author}</a> : author}
+    </p>
+</div>

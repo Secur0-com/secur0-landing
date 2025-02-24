@@ -15,6 +15,14 @@
     --card-border: rgba(255,255,255,0.15);
 }
 
+.external-link::after {
+    content: '↩';
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    padding-left: 2px;
+    transform: rotate(90deg);
+}
+
 html,
 body {
     margin: 0;

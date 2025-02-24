@@ -14,7 +14,7 @@ import logo from "../assets/logo.svg";
         <a href="/" class={Astro.url.pathname === "/" ? "text-white font-black" : "text-white font-normal"}>
             Para empresas
         </a>
-        <a href="/hackers" class={Astro.url.pathname === "/hackers" ? "text-white font-black" : "text-white font-normal"}>
+        <a href="/hackers" class={Astro.url.pathname === "/hackers" || Astro.url.pathname === "/hackers/" ? "text-white font-black" : "text-white font-normal"}>
             Para hackers
         </a>
     </nav>

@@ -2,11 +2,11 @@
 
 Los presentes términos y condiciones e información legal (en adelante, “Términos y Condiciones”) regulan el uso y acceso al sitio web \*.secur0.com y a la plataforma digital “Secur0” (en adelante, denominadas indistinta o conjuntamente como el “Sitio Web” o la “Plataforma”), titularidad de HACK 4 BOUNTY, SL, (en adelante, indistintamente, “Secur0” o el “Responsable”). Secur0 informa a los Usuarios que cumple con la vigente normativa de protección de datos, y con carácter especial, con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos) y con la Ley de la Sociedad de Servicios de la Información y Comercio Electrónico, Ley 34/2002, de 11 de julio. 
 
-| Identidad: | \[\*\] |
+| Identidad: | HACK 4 BOUNTY, SL |
 | :---- | :---- |
-| NIF: | \[\*\] |
-| Dirección postal: | \[\*\] |
-| Correo electrónico: | \[\*\] |
+| NIF: | B75428623 |
+| Dirección postal: | Calle del Cardenal Cisneros 54, 2 d, 28010 Madrid |
+| Correo electrónico: | javier@secur0.com |
 
 El registro, acceso y navegación en la Plataforma implica la aceptación plena y sin reservas de los presentes Términos y Condiciones por parte de los navegantes y Usuarios del Sitio Web. 
 
@@ -27,13 +27,13 @@ El Usuario garantiza que todos los datos sobre su identidad facilitados a Secur0
 
 El Usuario se compromete a no divulgar su contraseña ni hacerla accesible a terceros. Puesto que Secur0 no puede garantizar la identidad de los usuarios registrados, el Usuario será el único responsable en caso de uso de la contraseña por terceros, incluidas las manifestaciones vertidas a través de la Plataforma, o cualquier otra actuación que se lleve a cabo mediante el uso de la contraseña. 
 
-Los Usuarios se obligan a poner inmediatamente en conocimiento de Secur0 la sustracción, divulgación o pérdida de la contraseña, comunicando a Secur0 a través del correo electrónico \[\*\]
+Los Usuarios se obligan a poner inmediatamente en conocimiento de Secur0 la sustracción, divulgación o pérdida de la contraseña, comunicando a Secur0 a través del correo electrónico javier@secur0.com
 
 Una vez completado el proceso de alta, Secur0 habilitará y dará acceso a la Plataforma. 
 
 3. ## DE LOS USUARIOS Y RESOLUCIÓN CONTRACTUAL (ELIMINACIÓN DE CUENTA)
 
-El Usuario puede dirigirse en cualquier momento a Secur0 para solicitar la eliminación de su perfil de la plataforma. En todo caso puede revocar su consentimiento en cualquier momento remitiendo un correo desde su correo registrado con el asunto “Baja de Usuario” a \[\*\] incluyendo en el cuerpo del correo electrónico el nombre de usuario, el correo electrónico, su teléfono móvil, NIF utilizado al registrarse en la Plataforma. 
+El Usuario puede dirigirse en cualquier momento a Secur0 para solicitar la eliminación de su perfil de la plataforma. En todo caso puede revocar su consentimiento en cualquier momento remitiendo un correo desde su correo registrado con el asunto “Baja de Usuario” a javier@secur0.com incluyendo en el cuerpo del correo electrónico el nombre de usuario, el correo electrónico, su teléfono móvil, NIF utilizado al registrarse en la Plataforma. 
 
 Secur0 puede suspender o dar de baja a un Usuario (y por lo tanto optar por suspender o resolver la relación contractual) inmediatamente en caso de que se incumpla cualquier obligación de los Términos y Condiciones. En dicho caso Secur0 dejará de prestar los servicios que ofrece a través de la Plataforma sin necesidad de alegar ninguna causa. 
 
@@ -72,9 +72,7 @@ Una vez se haya completado el registro, el Usuario podrá acceder a los Servicio
 
 Para poder formar parte de la plataforma de Secur0 es necesario completar el formulario de alta. 
 
-\[Completar\] El Profesional se puede dar de alta en la Plataforma, rellenando un formulario en el que se le solicita datos identificativos necesarios para prestar los Servicios ofrecidos en la Plataforma. Alternativamente, puede vincular su cuenta de usuario de terceras plataformas como Google, etc
-
-2. ### Servicios a prestar por el Profesional en la Plataforma
+El Profesional se puede dar de alta en la Plataforma, rellenando un formulario en el que se le solicita datos identificativos necesarios para prestar los Servicios ofrecidos en la Plataforma. Alternativamente, puede vincular su cuenta de usuario de terceras plataformas como Google, GitHub, etc.
 
 6. ## PROTECCIÓN DE DATOS PERSONALES 
 
@@ -130,7 +128,7 @@ Secur0 no garantiza la existencia de interrupciones o errores en el acceso de la
 
 14. ## LEGISLACIÓN APLICABLE
 
-La validez, ejecución e interpretación de los presentes Términos y Condiciones serán reguladas en todos sus aspectos por las leyes españolas. En el supuesto de que surja cualquier conflicto o discrepancia en la interpretación o aplicación de los presentes Términos y Condiciones de utilización de la Plataforma, se someterá a los Juzgados y Tribunales de \[\*\]. 
+La validez, ejecución e interpretación de los presentes Términos y Condiciones serán reguladas en todos sus aspectos por las leyes españolas. En el supuesto de que surja cualquier conflicto o discrepancia en la interpretación o aplicación de los presentes Términos y Condiciones de utilización de la Plataforma, se someterá a los Juzgados y Tribunales de la Comunidad de Madrid. 
 
 15. ## ACTUALIZACIÓN DE LOS TÉRMINOS Y CONDICIONES
 

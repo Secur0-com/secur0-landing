@@ -4,6 +4,6 @@ const { extras, title, description } = Astro.props;
 ---
 
 <div class={extras + " " + "backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl flex flex-col items-start justify-between gap-4"}>
-    <h1 class="w-full text-3xl font-normal text-center sm:text-left" set:html={title}>{title}</h1>
-    {description && <p class="text-base text-gray-300 font-normal text-left">{description}</p>}
+    <h1 class="w-full text-3xl font-normal text-center md:text-left" set:html={title}>{title}</h1>
+    {description && <p class="text-base text-gray-300 font-normal text-center md:text-left">{description}</p>}
 </div>

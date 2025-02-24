@@ -6,7 +6,7 @@ const { title, description } = Astro.props;
 ---
 
 
-<div class="w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl">
+<div class="md:w-[700px] lg:w-[900[px] w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl">
     <span
         onclick="document.querySelectorAll('.faq-content').forEach(el => { if(el !== this.nextElementSibling) { el.classList.add('hidden'); el.previousElementSibling.querySelector('img').classList.remove('rotate-180'); }}); this.nextElementSibling.classList.toggle('hidden'); this.querySelector('img').classList.toggle('rotate-180')"
         class="w-full flex flex-row justify-between items-center cursor-pointer"
@@ -14,5 +14,5 @@ const { title, description } = Astro.props;
         <h1 class="text-base sm:text-2xl font-bold text-white max-w-[95%] sm:max-w-[90%] text-left select-none">{title}</h1>
         <Image src={chevron} alt="Arrow up" class="w-8 h-8 invert opacity-80 transition-transform duration-300" />
     </span>
-    <p class="faq-content text-white text-base font-normal text-left mt-2 hidden transition-all duration-300">{description}</p>
+    <p class="faq-content text-white text-base font-normal text-left mt-2 hidden transition-all duration-300" set:html={description}>{description}</p>
 </div>

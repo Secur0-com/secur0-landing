@@ -5,8 +5,8 @@ const { title, step, description } = Astro.props;
 
 <div class="w-full backdrop-blur-2xl bg-(--card-bg) border-1 border-(--card-border) py-2.5 px-4 rounded-xl flex flex-col items-start gap-4">
     <div class="w-full flex flex-row items-center justify-between gap-2">
-        <h1 class="text-2xl font-bold text-left">{title}</h1>
-        <p class="font-bold w-[52px] text-right">{step}</p>
+        <h1 class="text-2xl font-bold text-left max-w-[80%]">{title}</h1>
+        <p class="font-bold w-[55px] text-right">{step}</p>
     </div>
     <p class="text-gray-300 text-left">{description}</p>
 </div>

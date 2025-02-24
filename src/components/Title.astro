@@ -6,7 +6,7 @@ const { id, tag, title, description } = Astro.props;
 <section id={id} class="flex flex-col items-center gap-4 px-2.5 w-full mx-auto text-center py-2">
     <h2 class="max-w-[400px] text-sm uppercase font-mono font-medium tracking-[2px] px-4 py-2.5 bg-(--card-bg) border-1 border-(--card-border) text-white rounded-full">{tag}</h2>
     <!-- <h2 class="max-w-[400px] text-sm uppercase font-mono font-medium tracking-[2px] px-4 py-2.5 bg-neutral-800 text-blue-300 rounded-full">{tag}</h2> -->
-    <h1 class="max-w-[400px] text-white text-4xl font-medium">{title}</h1>
-    <p class="max-w-[400px] text-gray-300 mb-6" set:html={description}></p>
+    <h1 class="max-w-[400px] text-white text-4xl font-medium" set:html={title}>{title}</h1>
+    <p class="max-w-[400px] text-gray-300 mb-6 font-light" set:html={description}></p>
     <slot />
 </section>

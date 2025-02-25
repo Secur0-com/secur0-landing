@@ -87,9 +87,16 @@ import Card from "../components/Card.astro";
 			</div>
 		</Title>
 		<section class="flex flex-col items-center gap-2 text-white max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] mx-auto text-center">
-			<h1 class="text-xl font-semibold">¿Has recibido un pentesting hace poco?</h1>
-			<p class="text-gray-300 font-light sm:w-[500px]">Ponnos a prueba, nos comprometemos a encontrar vulnerabilidades que vuestra consultora no ha visto, y <strong>si no cumplimos no nos pagas</strong>.</p>
-			<a class='text-sky-400 underline' href='mailto:javier@secur0.com'>Contáctanos</a>
+			<h1 class="text-xl font-semibold">¿Seguro que tu último pentesting fue suficiente?</h1>
+			<p class="text-gray-300 font-light sm:w-[500px]">
+				<strong>Rétanos</strong>: encontramos las vulnerabilidades que otros pasan por alto. Si no hallamos nada nuevo, no pagas. Seguridad real y sin riesgos.
+			</p>
+			<a
+					href="mailto:javier@secur0.com"
+					class="flex items-center gap-2 mt-2 px-4 py-2 rounded-full bg-white cursor-pointer text-black"
+				>
+					Contáctanos
+			</a>
 		</section>
 		<Title
 			id="our-services"
@@ -108,7 +115,14 @@ import Card from "../components/Card.astro";
 			id="faq"
 			tag="faq"
 			title="Preguntas frecuentes"
-			description="Si tienes alguna otra pregunta <a class='text-sky-400 underline' href='mailto:javier@secur0.com'>contáctanos</a>."
+			description=`Si tienes alguna otra pregunta
+				<a
+					href="mailto:javier@secur0.com"
+					class="w-max flex items-center gap-2 mt-2 px-4 py-2 rounded-full bg-white cursor-pointer text-black font-normal"
+				>
+						Contáctanos
+				</a>
+			`
 		>
 			<div class="flex flex-col items-center mx-auto gap-4 max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px]">
 				<Faq

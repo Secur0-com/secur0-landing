@@ -12,6 +12,34 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description}>
+
+		<meta property="og:title" content="Secur0 - La plataforma española de Bug Bounty" />
+		<meta property="og:description" content="Secur0 permite hackear a empresas de forma legal y con recompensas." />
+		<meta property="og:image" content="https://secur0.com/social-preview.jpg" />
+		<meta property="og:url" content="https://secur0.com" />
+		<meta property="og:type" content="website" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Secur0 - The Bug Bounty Platform" />
+		<meta name="twitter:description" content="Secur0 permite hackear a empresas de forma legal y con recompensas." />
+		<meta name="twitter:image" content="https://secur0.com/social-preview.jpg" />
+		<meta name="twitter:site" content="@Secur00" />
+
+		<script type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "Organization",
+			  "name": "Secur0",
+			  "url": "https://secur0.com",
+			  "logo": "https://secur0.com/logo.png",
+			  "sameAs": [
+				"https://x.com/Secur00",
+				"https://www.linkedin.com/company/secur0",
+				"https://github.com/Secur0-com",
+				"https://www.youtube.com/@secur0-com",
+			  ]
+			}
+		</script>
 	</head>
 	<body>
 		<slot />

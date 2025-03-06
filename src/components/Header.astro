@@ -1,8 +1,37 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../assets/logo.svg";
-const { baseUrl, companiesText, companiesUrl, hackersText, hackersUrl } =
-    Astro.props;
+const { baseUrl, companiesText, companiesUrl, hackersText, hackersUrl } = Astro.props;
+
+const isSpanish = () => {
+    return !Astro.url.pathname.includes("/en");
+}
+const spanishRedirect = () => {
+    if (Astro.url.pathname === "/en")
+        return "/";
+    else if (Astro.url.pathname === "/en/hackers")
+        return "/hackers";
+    else if (Astro.url.pathname === "/en/legal/terms-and-conditions")
+            return "/legal/terms-and-conditions";
+    else if (Astro.url.pathname === "/en/legal/privacy-policy")
+            return "/legal/privacy-policy";
+    return Astro.url.pathname;
+}
+
+const isEnglish = () => {
+    return Astro.url.pathname.includes("/en");
+}
+const englishRedirect = () => {
+    if (Astro.url.pathname === "/")
+        return "/en";
+    else if (Astro.url.pathname === "/hackers")
+        return "/en/hackers";
+    else if (Astro.url.pathname === "/legal/terms-and-conditions")
+            return "/en/legal/terms-and-conditions";
+    else if (Astro.url.pathname === "/legal/privacy-policy")
+            return "/en/legal/privacy-policy";
+    return Astro.url.pathname;
+}
 ---
 
 <header
@@ -27,23 +56,23 @@ const { baseUrl, companiesText, companiesUrl, hackersText, hackersUrl } =
         class="flex flex-row gap-1 text-gray-300 font-normal hover:text-white cursor-pointer"
     >
         <a
-            href={Astro.url.pathname === "/en/hackers" ? "/hackers" : "/"}
+            href={spanishRedirect()}
             class="flex flex-row items-center gap-2"
         >
             <img
                 src="/src/assets/spanish.webp"
                 alt="Change to spanish"
-                class={`w-6 h-6 ${Astro.url.pathname === "/" || Astro.url.pathname === "/hackers" ? "border-b-2 border-white" : ""}`}
+                class={`w-6 h-6 ${isSpanish() ? "border-b-2 border-white" : ""}`}
             />
         </a>
         <a
-            href={Astro.url.pathname === "/hackers" ? "/en/hackers" : "/"}
+            href={englishRedirect()}
             class="flex flex-row items-center gap-2"
         >
             <img
                 src="/src/assets/english.webp"
                 alt="Cambiar a inglés"
-                class={`w-6 h-6 ${Astro.url.pathname === "/en" || Astro.url.pathname === "/en/hackers" ? "border-b-2 border-white" : ""}`}
+                class={`w-6 h-6 ${isEnglish() ? "border-b-2 border-white" : ""}`}
             />
         </a>
     </div>

@@ -1,0 +1,146 @@
+---
+import Companies from "../../components/Companies.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import RotatingText from "../../components/react/RotatingText.jsx";
+import arrowImage from "../../assets/arrow.svg";
+import { Image } from "astro:assets";
+import "../../styles/global.css";
+import Card from "../../components/Card.astro";
+import Video from "../../components/Video.astro";
+---
+
+<Layout
+	lang="en"
+	title="Bug bounty for hackers | Secur0"
+	description="Report vulnerabilities in real companies legally and receive rewards."
+>
+	<div class="flex flex-col gap-24 max-w-[1280px] mx-auto">
+		<section
+			class="min-h-[690px] flex flex-col items-center gap-26 sm:gap-24 lg:gap-30"
+		>
+		<Header
+			baseUrl="/en"
+			companiesText="For companies"
+			companiesUrl="/en"
+			hackersText="For hackers"
+			hackersUrl="/en/hackers"
+		/>
+		<h1
+			class="flex flex-col lg:flex-row gap-2 sm:gap-5 items-center text-6xl sm:text-7xl text-white font-light sm:mt-10"
+		>
+			Hack with <RotatingText
+				client:load
+				texts={[
+					"responsibility",
+					"impact",
+					"rewards",
+					"recognition",
+					"Secur0",
+				]}
+				mainClassName="text-5xl sm:text-7xl backdrop-blur-2xl bg-(--card-bg-dark) border-1 border-(--card-border) text-white font-semibold overflow-hidden py-1 sm:py-2.5 px-2 sm:px-4 justify-center rounded-xl"
+				staggerFrom={"last"}
+				initial={{ y: "100%" }}
+				animate={{ y: 0 }}
+				exit={{ y: "-120%" }}
+				staggerDuration={0.025}
+				splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+				transition={{ type: "spring", damping: 30, stiffness: 400 }}
+				rotationInterval={2000}
+			/>
+		</h1>
+		<p
+			class="text-gray-300 max-w-[350px] sm:max-w-[500px] text-center text-base sm:text-2xl font-light"
+		>
+			Hack in real environments and receive rewards.
+		</p>
+		<div class="flex flex-row items-center gap-6">
+			<a
+				href="mailto:javier@secur0.com"
+				class="flex items-center gap-2 px-4 py-2 rounded-full bg-white cursor-pointer"
+			>
+				Contact us <Image src={arrowImage} alt="Arrow right" />
+			</a>
+			<a
+				href="#what-is-secur0"
+				class="flex items-center gap-2 px-4 py-2 rounded-full text-white cursor-pointer"
+			>
+				See more <Image
+					src={arrowImage}
+					alt="Arrow right"
+					class="rotate-90 invert opacity-80"
+				/>
+			</a>
+		</div>
+		<Companies text="with support of companies like" />
+		</section>
+		<Title
+			id="for-hackers"
+			tag="what we offer"
+			title="We know you'll like this"
+			description="We have the best of all platforms in one."
+		>
+			<div
+				class="flex flex-wrap gap-4 w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]"
+			>
+				<Card
+					extras="w-full md:w-[calc(60%-0.5rem)]"
+					title="<strong>Certify</strong> your findings"
+					description="We will give you a certificate that includes all the vulnerabilities you have found to include in your resume."
+				/>
+				<Card
+					extras="w-full md:w-[calc(40%-0.5rem)]"
+					title="Earn <strong>money</strong>"
+					description="Receive money for each vulnerability you find in bug bounty programs."
+				/>
+				<Card
+					extras="w-full md:w-[calc(40%-0.5rem)]"
+					title="Hack companies <strong>legally</strong>"
+					description="Test your knowledge in real environments in a legal way."
+				/>
+				<Card
+					extras="w-full md:w-[calc(60%-0.5rem)]"
+					title="VDPs only to <strong>non-profit organizations</strong>."
+					description="Don't give your time to companies that don't pay. There will only be VDPs for NGOs and 100% open source projects."
+				/>
+			</div>
+		</Title>
+		<Title
+			id="our-community"
+			tag="our community"
+			title="Learn from the best"
+			description="We are very focused on training, here you can learn from the best hackers in Spanish."
+		>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]"
+			>
+				<Video
+					title="Minimalist Bug Hunting: Maximum Impact with Basic Tools"
+					description="In this talk we will explore how to develop a strategic mindset for identifying vulnerabilities in bug bounty programs."
+					videoId="s9gATBB0kog"
+					videoPoster="https://i3.ytimg.com/vi/s9gATBB0kog/maxresdefault.jpg"
+					authorLink="https://www.linkedin.com/in/pedrojosenavasperez/"
+					author="Pedro José Navas Pérez"
+					textBy="By:"
+				/>
+				<Video
+					title="Cybersecurity, hacking and bug bounties"
+					description="In this talk we will look at why companies pay for vulnerabilities, what the difference is between technical bugs and business logic errors, and how you can leverage this to improve your approach as a hacker."
+					videoId="Ofr7a_Hc3PQ"
+					authorLink="https://www.linkedin.com/in/bberastegui/"
+					author="Borja Berastegui"
+					textBy="By:"
+				/>
+			</div>
+		</Title>
+		<Footer
+			termsText="Terms and conditions"
+			termsUrl="/en/legal/terms-and-conditions"
+			privacyText="Privacy policy"
+			privacyUrl="/en/legal/privacy-policy"
+			allRightsReserved="All rights reserved."
+		/>
+	</div>
+</Layout>

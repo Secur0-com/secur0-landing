@@ -1,0 +1,197 @@
+---
+import Companies from "../../components/Companies.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Title from "../../components/Title.astro";
+import Faq from "../../components/Faq.astro";
+import Layout from "../../layouts/Layout.astro";
+import RotatingText from "../../components/react/RotatingText.jsx";
+import arrowImage from "../../assets/arrow.svg";
+import { Image } from "astro:assets";
+import "../../styles/global.css";
+import Steps from "../../components/Steps.astro";
+import Card from "../../components/Card.astro";
+---
+
+<Layout
+	lang="en"
+	title="Bug bounty for companies | Secur0"
+	description="We offer cybersecurity, pentesting and bug bounty solutions for companies in the Spanish market."
+>
+	<div class="flex flex-col gap-24 max-w-[1280px] mx-auto">
+		<section
+			class="min-h-[690px] flex flex-col items-center gap-26 sm:gap-24 lg:gap-30"
+		>
+			<Header
+				baseUrl="/en"
+				companiesText="For companies"
+				companiesUrl="/en"
+				hackersText="For hackers"
+				hackersUrl="/en/hackers"
+			/>
+			<h1
+				class="flex flex-col lg:flex-row gap-2 sm:gap-5 items-center text-6xl sm:text-7xl text-white font-light sm:mt-10"
+			>
+				Hack with <RotatingText
+					client:load
+					texts={[
+						"responsibility",
+						"impact",
+						"rewards",
+						"recognition",
+						"Secur0",
+					]}
+					mainClassName="text-5xl sm:text-7xl backdrop-blur-2xl bg-(--card-bg-dark) border-1 border-(--card-border) text-white font-semibold overflow-hidden py-1 sm:py-2.5 px-2 sm:px-4 justify-center rounded-xl"
+					staggerFrom={"last"}
+					initial={{ y: "100%" }}
+					animate={{ y: 0 }}
+					exit={{ y: "-120%" }}
+					staggerDuration={0.025}
+					splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+					transition={{ type: "spring", damping: 30, stiffness: 400 }}
+					rotationInterval={2000}
+				/>
+			</h1>
+			<p
+				class="text-gray-300 max-w-[350px] sm:max-w-[500px] text-center text-base sm:text-2xl font-light"
+			>
+				Access to a network of ethical hackers and pay only for
+				vulnerability found.
+			</p>
+			<div class="flex flex-row items-center gap-6">
+				<a
+					href="mailto:javier@secur0.com"
+					class="flex items-center gap-2 px-4 py-2 rounded-full bg-white cursor-pointer"
+				>
+					Contact us <Image src={arrowImage} alt="Arrow right" />
+				</a>
+				<a
+					href="#what-is-secur0"
+					class="flex items-center gap-2 px-4 py-2 rounded-full text-white cursor-pointer"
+				>
+					See more <Image
+						src={arrowImage}
+						alt="Arrow right"
+						class="rotate-90 invert opacity-80"
+					/>
+				</a>
+			</div>
+			<Companies text="with support of companies like" />
+		</section>
+		<Title
+			id="what-is-secur0"
+			tag="what makes us unique"
+			title="Consulting firms aren't doing it right <span class='text-xs'>(and you know it)</span>"
+			description="At Secur0 we find vulnerabilities that a consulting firm would never find."
+		>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]"
+			>
+				<Card
+					title="Identify <strong>real vulnerabilities</strong>"
+				/>
+				<Card title="Community of <strong>expert hackers</strong>" />
+				<Card title="Continuous <strong>testing</strong>" />
+				<Card
+					title="Start the service in <strong>only 48h</strong>"
+				/>
+				<Card
+					title="Pay only for <strong>valid vulnerabilities</strong>"
+				/>
+				<Card
+					title="Prices <strong>adapted</strong> to the spanish market"
+				/>
+			</div>
+		</Title>
+		<section
+			class="flex flex-col items-center gap-2 text-white max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] mx-auto text-center"
+		>
+			<h1 class="text-xl font-semibold">
+				Are you sure your last pentesting was sufficient?
+			</h1>
+			<p class="text-gray-300 font-light sm:w-[500px]">
+				<strong>Challenge us</strong>: we find the vulnerabilities that others overlook.
+				If we don't find anything new, you don't pay.
+				Real, risk-free security.
+			</p>
+			<a
+				href="mailto:javier@secur0.com"
+				class="flex items-center gap-2 mt-2 px-4 py-2 rounded-full bg-white cursor-pointer text-black"
+			>
+				Contact us
+			</a>
+		</section>
+		<Title
+			id="our-services"
+			tag="our services"
+			title="Recommended steps"
+			description="These are the steps we recommend that you follow in the world of bug bounty."
+		>
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-white max-w-[400px] md:max-w-[700px] lg:max-w-[900px]"
+			>
+				<Steps
+					title="Crowdsourced pentesting"
+					step="Step 1"
+					description="Use a network of hackers instead of two underpaid consultants."
+				/>
+				<Steps
+					title="Private bug bounty"
+					step="Step 2"
+					description="Select the best hackers for your bug bounty program."
+				/>
+				<Steps
+					title="Public bug bounty"
+					step="Step 3"
+					description="Make your bug bounty program public and find more vulnerabilities."
+				/>
+				<Steps
+					title="Live hacking event"
+					step="Step 4"
+					description="Gather the country's best hackers with your own live hacking event."
+				/>
+			</div>
+		</Title>
+		<Title
+			id="faq"
+			tag="faq"
+			title="Frequently asked questions"
+			description=`If you have any other question...
+				<a
+					href="mailto:javier@secur0.com"
+					class="w-max flex items-center gap-2 mt-2 px-4 py-2 rounded-full bg-white cursor-pointer text-black font-normal"
+				>
+						Contact us
+				</a>
+			`
+		>
+			<div
+				class="flex flex-col items-center mx-auto gap-4 max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px]"
+			>
+				<Faq
+					title="Why Secur0 and not a traditional consulting firm?"
+					description=`We find more vulnerabilities. As hacking is a very creative job a network of hackers manages to find more vulnerabilities than a couple of auditors.`
+				/>
+				<Faq
+					title="Are vulnerabilities found by hackers kept confidential?"
+					description="You have the same guarantees as with any pentesting service. Hackers sign a confidentiality agreement and agree not to disclose information."
+				/>
+				<Faq
+					title="Do you comply with ISO vulnerability disclosure standards?"
+					description="Yes, we adhere to ISO 29147 and 30111 standards related to vulnerability disclosure and management."
+				/>
+				<Faq
+					title="Can I request a pilot?"
+					description="Si. Puedes solicitar un piloto de tiempo limitado donde solo pagarás si encontramos vulnerabilidades. <a class='text-sky-400 underline' href='mailto:javier@secur0.com'>Contacta con nosotros</a>"
+				/>
+			</div>
+		</Title>
+		<Footer
+			termsText="Terms and conditions"
+			termsUrl="/en/legal/terms-and-conditions"
+			privacyText="Privacy policy"
+			privacyUrl="/en/legal/privacy-policy"
+			allRightsReserved="All rights reserved."
+		/>
+	</div>
+</Layout>

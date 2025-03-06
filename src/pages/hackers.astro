@@ -12,17 +12,24 @@ import "../styles/global.css";
 import Steps from "../components/Steps.astro";
 import Card from "../components/Card.astro";
 import Video from "../components/Video.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Bug bounty para hackers | Secur0" description="Reporta vulnerabilidades en empresas reales de forma legal y recibe recompensas.">
+<Layout
+	lang="es"
+	title="Bug bounty para hackers | Secur0"
+	description="Reporta vulnerabilidades en empresas reales de forma legal y recibe recompensas."
+>
 	<div class="flex flex-col gap-24 max-w-[1280px] mx-auto">
 		<section
 			class="min-h-[690px] flex flex-col items-center gap-26 sm:gap-24 lg:gap-30"
 		>
-			<Header />
+			<Header
+				baseUrl="/"
+				companiesText="Para empresas"
+				companiesUrl="/"
+				hackersText="Para hackers"
+				hackersUrl="/hackers"
+			/>
 			<h1
 				class="flex flex-col lg:flex-row gap-2 sm:gap-5 items-center text-6xl sm:text-7xl text-white font-light sm:mt-10"
 			>
@@ -70,7 +77,7 @@ import Video from "../components/Video.astro";
 					/>
 				</a>
 			</div>
-			<Companies />
+			<Companies text="con apoyo de empresas como" />
 		</section>
 		<Title
 			id="for-hackers"
@@ -78,11 +85,29 @@ import Video from "../components/Video.astro";
 			title="Sabemos que esto te puede gustar"
 			description="Tenemos lo mejor de todas las plataformas en una."
 		>
-			<div class="flex flex-wrap gap-4 w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]">
-				<Card extras="w-full md:w-[calc(60%-0.5rem)]" title="<strong>Certifica</strong> tus descubrimientos" description="Te daremos un certificado que incluye todas las vulnerabilidades que hayas encontrado para incluir en tu currículum." />
-				<Card extras="w-full md:w-[calc(40%-0.5rem)]" title="Gana <strong>dinero</strong>" description="Recibe dinero por cada vulnerabilidad que encuentres en programas de bug bounty." />
-				<Card extras="w-full md:w-[calc(40%-0.5rem)]" title="Hackea empresas <strong>legalmente</strong>" description="Prueba tus conocimientos en entornos reales de forma legal." />
-				<Card extras="w-full md:w-[calc(60%-0.5rem)]" title="VDPs solo a <strong>organizaciones sin ánimo de lucro</strong>" description="No des tu tiempo a empresas que no pagan. Solo habrá VDPs para ONGs y proyectos 100% open source." />
+			<div
+				class="flex flex-wrap gap-4 w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]"
+			>
+				<Card
+					extras="w-full md:w-[calc(60%-0.5rem)]"
+					title="<strong>Certifica</strong> tus descubrimientos"
+					description="Te daremos un certificado que incluye todas las vulnerabilidades que hayas encontrado para incluir en tu currículum."
+				/>
+				<Card
+					extras="w-full md:w-[calc(40%-0.5rem)]"
+					title="Gana <strong>dinero</strong>"
+					description="Recibe dinero por cada vulnerabilidad que encuentres en programas de bug bounty."
+				/>
+				<Card
+					extras="w-full md:w-[calc(40%-0.5rem)]"
+					title="Hackea empresas <strong>legalmente</strong>"
+					description="Prueba tus conocimientos en entornos reales de forma legal."
+				/>
+				<Card
+					extras="w-full md:w-[calc(60%-0.5rem)]"
+					title="VDPs solo a <strong>organizaciones sin ánimo de lucro</strong>"
+					description="No des tu tiempo a empresas que no pagan. Solo habrá VDPs para ONGs y proyectos 100% open source."
+				/>
 			</div>
 		</Title>
 		<Title
@@ -91,7 +116,9 @@ import Video from "../components/Video.astro";
 			title="Aprende de los mejores"
 			description="Estamos muy enfocados en la formación, aquí podrás aprender de los mejores hackers en español."
 		>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]">
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full text-white max-w-[420px] md:max-w-[700px] lg:max-w-[900px]"
+			>
 				<Video
 					title="Bug Hunting Minimalista: Impacto Máximo con Herramientas Básicas"
 					description="En esta charla exploraremos cómo desarrollar una mentalidad estratégica para identificar vulnerabilidades en programas de bug bounty."
@@ -99,6 +126,7 @@ import Video from "../components/Video.astro";
 					videoPoster="https://i3.ytimg.com/vi/s9gATBB0kog/maxresdefault.jpg"
 					authorLink="https://www.linkedin.com/in/pedrojosenavasperez/"
 					author="Pedro José Navas Pérez"
+					textBy="Por:"
 				/>
 				<Video
 					title="La ciberseguridad, el hacking y los bug bounties"
@@ -106,9 +134,16 @@ import Video from "../components/Video.astro";
 					videoId="Ofr7a_Hc3PQ"
 					authorLink="https://www.linkedin.com/in/bberastegui/"
 					author="Borja Berastegui"
+					textBy="Por:"
 				/>
 			</div>
 		</Title>
-		<Footer />
+		<Footer
+			termsText="Términos y condiciones"
+			termsUrl="/legal/terms-and-conditions"
+			privacyText="Política de privacidad"
+			privacyUrl="/legal/privacy-policy"
+			allRightsReserved="Todos los derechos reservados."
+		/>
 	</div>
 </Layout>

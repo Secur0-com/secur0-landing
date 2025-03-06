@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 import fpcm from "../assets/fpcm.webp";
 import incibe from "../assets/incibe.webp";
 import wayra from "../assets/wayra.webp";
-
+const { text } = Astro.props;
 ---
 
 <section class="flex flex-col items-center gap-4 w-full px-2.5 text-cente">
     <h2 class="font-mono uppercase text-xs sm:text-base tracking-[2.4px] text-white">
-        con apoyo de empresas como
+        {text}
     </h2>
     <div class="flex flex-row items-center gap-8 sm:gap-14 max-w-[850px] h-[30px] sm:h-[40px] md:h-[50px] px-2 sm:px-0">
         <a href="https://incibe.es/" target="_blank" class="w-full h-full">

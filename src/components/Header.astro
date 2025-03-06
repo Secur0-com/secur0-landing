@@ -3,6 +3,9 @@ import { Image } from "astro:assets";
 import logo from "../assets/logo.svg";
 const { baseUrl, companiesText, companiesUrl, hackersText, hackersUrl } = Astro.props;
 
+import spanish from "../assets/spanish.webp";
+import english from "../assets/english.webp";
+
 const isSpanish = () => {
     return !Astro.url.pathname.includes("/en");
 }
@@ -59,8 +62,9 @@ const englishRedirect = () => {
             href={spanishRedirect()}
             class="flex flex-row items-center gap-2"
         >
-            <img
-                src="/src/assets/spanish.webp"
+            <Image
+                loading={"eager"}
+                src={spanish}
                 alt="Change to spanish"
                 class={`w-6 h-6 ${isSpanish() ? "border-b-2 border-white" : ""}`}
             />
@@ -69,8 +73,9 @@ const englishRedirect = () => {
             href={englishRedirect()}
             class="flex flex-row items-center gap-2"
         >
-            <img
-                src="/src/assets/english.webp"
+            <Image
+                loading={"eager"}
+                src={english}
                 alt="Cambiar a inglés"
                 class={`w-6 h-6 ${isEnglish() ? "border-b-2 border-white" : ""}`}
             />

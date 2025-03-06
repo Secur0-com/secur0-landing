@@ -1,6 +1,6 @@
 ---
 // Destructure title, tag, and description from Astro.props
-const { title, description, videoId, videoPoster, authorLink, author } = Astro.props;
+const { title, description, videoId, videoPoster, authorLink, author, textBy } = Astro.props;
 import { YouTube } from 'astro-embed';
 ---
 
@@ -16,7 +16,7 @@ import { YouTube } from 'astro-embed';
             class="w-full aspect-video rounded-md"
         />
         <p class="w-full flex items-center gap-2 text-gray-300">
-            By: {authorLink ? <a href={authorLink} target="_blank" class="external-link hover:underline">{author}</a> : author}
+            {textBy} {authorLink ? <a href={authorLink} target="_blank" class="external-link hover:underline">{author}</a> : author}
         </p>
     </div>
 </div>

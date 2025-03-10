@@ -7,32 +7,39 @@ import spanish from "../assets/spanish.webp";
 import english from "../assets/english.webp";
 
 const isSpanish = () => {
-    return !Astro.url.pathname.includes("/en");
+    return !(Astro.url.pathname.includes("/en") || Astro.url.pathname.includes("/en/"));
 }
 const spanishRedirect = () => {
-    if (Astro.url.pathname === "/en")
+    if (Astro.url.pathname === "/en" || Astro.url.pathname === "/en/")
         return "/";
-    else if (Astro.url.pathname === "/en/hackers")
-        return "/hackers";
-    else if (Astro.url.pathname === "/en/legal/terms-and-conditions")
-            return "/legal/terms-and-conditions";
-    else if (Astro.url.pathname === "/en/legal/privacy-policy")
-            return "/legal/privacy-policy";
+    else if (Astro.url.pathname === "/en/hackers"
+        || Astro.url.pathname === "/en/hackers/")
+        return "/hackers/";
+    else if (Astro.url.pathname === "/en/legal/terms-and-conditions"
+        || Astro.url.pathname === "/en/legal/terms-and-conditions/")
+            return "/legal/terms-and-conditions/";
+    else if (Astro.url.pathname === "/en/legal/privacy-policy"
+        || Astro.url.pathname === "/en/legal/privacy-policy/")
+            return "/legal/privacy-policy/";
     return Astro.url.pathname;
 }
 
 const isEnglish = () => {
-    return Astro.url.pathname.includes("/en");
+    return (Astro.url.pathname.includes("/en") || Astro.url.pathname.includes("/en/"));
 }
 const englishRedirect = () => {
-    if (Astro.url.pathname === "/")
-        return "/en";
-    else if (Astro.url.pathname === "/hackers")
-        return "/en/hackers";
-    else if (Astro.url.pathname === "/legal/terms-and-conditions")
-            return "/en/legal/terms-and-conditions";
-    else if (Astro.url.pathname === "/legal/privacy-policy")
-            return "/en/legal/privacy-policy";
+    if (Astro.url.pathname === "/"
+        || Astro.url.pathname === "")
+        return "/en/";
+    else if (Astro.url.pathname === "/hackers"
+        || Astro.url.pathname === "/hackers/")
+        return "/en/hackers/";
+    else if (Astro.url.pathname === "/legal/terms-and-conditions"
+        || Astro.url.pathname === "/legal/terms-and-conditions/")
+            return "/en/legal/terms-and-conditions/";
+    else if (Astro.url.pathname === "/legal/privacy-policy"
+        || Astro.url.pathname === "/legal/privacy-policy/")
+            return "/en/legal/privacy-policy/";
     return Astro.url.pathname;
 }
 ---
